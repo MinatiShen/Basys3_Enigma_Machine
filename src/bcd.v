@@ -1,3 +1,10 @@
+//This is the charactor to decimal decoder
+//numbers 1-26 represent characters a-z
+//since there's only 7 segment display on the Basys3 board
+//output seg0 is the least significant digit
+//output seg1 is the most significant digit
+//Tongchuan Shen @Nov 2017
+
 module AlphabetDecoder(seg0,seg1,in);
     input [4:0] in;
     output [7:0] seg0,seg1;
@@ -34,5 +41,6 @@ module AlphabetDecoder(seg0,seg1,in);
     assign seg1[4]=dec1;
     assign seg1[5]=dec1|dec2;
     assign seg1[6]=dec0|dec1;
+
 endmodule
 
